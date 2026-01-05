@@ -3,6 +3,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Coffee_Shop_Management_System
 {
@@ -22,12 +23,7 @@ namespace Coffee_Shop_Management_System
                 return;
             }
 
-            string connectionString =
-                @"Data Source=localhost\SQLEXPRESS;
-          Initial Catalog=Coffee Shop Management System;
-          Integrated Security=True;
-          Encrypt=True;
-          Trust Server Certificate=True";
+            string connectionString = @"Data Source = localhost\SQLEXPRESS; Initial Catalog=Cofee Shop Management System; Integrated Security = True";
 
             try
             {
@@ -37,7 +33,7 @@ namespace Coffee_Shop_Management_System
                     "SELECT r.RoleName " +
                     "FROM Employees e " +
                     "JOIN Roles r ON e.RoleId = r.RoleId " +
-                    "WHERE e.Email = @Email AND e.Password = @Password";
+                    "WHERE e.Useremail = @Email AND e.Password = @Password";
 
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@Email", txt_user_email.Text);
