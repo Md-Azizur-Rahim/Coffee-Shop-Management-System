@@ -76,5 +76,10 @@ namespace Coffee_Shop_Management_System
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -39,9 +39,10 @@
             // 
             lbl_user_Id.AutoSize = true;
             lbl_user_Id.Font = new Font("Calibri", 16.3018875F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl_user_Id.Location = new Point(120, 111);
+            lbl_user_Id.Location = new Point(171, 163);
+            lbl_user_Id.Margin = new Padding(4, 0, 4, 0);
             lbl_user_Id.Name = "lbl_user_Id";
-            lbl_user_Id.Size = new Size(137, 31);
+            lbl_user_Id.Size = new Size(179, 40);
             lbl_user_Id.TabIndex = 0;
             lbl_user_Id.Text = "User Email :";
             // 
@@ -49,26 +50,29 @@
             // 
             lbl_user_pass.AutoSize = true;
             lbl_user_pass.Font = new Font("Calibri", 16.3018875F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl_user_pass.Location = new Point(120, 173);
+            lbl_user_pass.Location = new Point(171, 254);
+            lbl_user_pass.Margin = new Padding(4, 0, 4, 0);
             lbl_user_pass.Name = "lbl_user_pass";
-            lbl_user_pass.Size = new Size(126, 31);
+            lbl_user_pass.Size = new Size(165, 40);
             lbl_user_pass.TabIndex = 1;
             lbl_user_pass.Text = "Password :";
             // 
             // txt_user_email
             // 
             txt_user_email.Font = new Font("Calibri", 16.3018875F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txt_user_email.Location = new Point(263, 111);
+            txt_user_email.Location = new Point(376, 163);
+            txt_user_email.Margin = new Padding(4, 4, 4, 4);
             txt_user_email.Name = "txt_user_email";
-            txt_user_email.Size = new Size(407, 37);
+            txt_user_email.Size = new Size(580, 47);
             txt_user_email.TabIndex = 2;
             // 
             // txt_user_password
             // 
             txt_user_password.Font = new Font("Calibri", 16.3018875F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txt_user_password.Location = new Point(263, 173);
+            txt_user_password.Location = new Point(376, 254);
+            txt_user_password.Margin = new Padding(4, 4, 4, 4);
             txt_user_password.Name = "txt_user_password";
-            txt_user_password.Size = new Size(407, 37);
+            txt_user_password.Size = new Size(580, 47);
             txt_user_password.TabIndex = 3;
             txt_user_password.UseSystemPasswordChar = true;
             // 
@@ -77,10 +81,11 @@
             btn_logIn.BackColor = Color.White;
             btn_logIn.Cursor = Cursors.Hand;
             btn_logIn.Font = new Font("Calibri", 16.3018875F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_logIn.Location = new Point(324, 287);
+            btn_logIn.Location = new Point(463, 422);
+            btn_logIn.Margin = new Padding(4, 4, 4, 4);
             btn_logIn.Name = "btn_logIn";
             btn_logIn.RightToLeft = RightToLeft.No;
-            btn_logIn.Size = new Size(146, 52);
+            btn_logIn.Size = new Size(209, 76);
             btn_logIn.TabIndex = 4;
             btn_logIn.Text = "Log In";
             btn_logIn.UseVisualStyleBackColor = false;
@@ -88,19 +93,21 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 224, 192);
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1143, 662);
             Controls.Add(btn_logIn);
             Controls.Add(txt_user_password);
             Controls.Add(txt_user_email);
             Controls.Add(lbl_user_pass);
             Controls.Add(lbl_user_Id);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(4, 4, 4, 4);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = " ";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
